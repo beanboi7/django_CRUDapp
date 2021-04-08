@@ -1,5 +1,5 @@
 # CRUD App using Django
-CRUD functionality using a simple Django App
+CRUD functionality implemented using a simple Django App
 
 ## Requirements:
 <ul>
