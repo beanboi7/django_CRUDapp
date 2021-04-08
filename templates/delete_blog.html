@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content  %}
-    <h1>{{ post.title }}</h1>
-    <form action = "" method = "post">{% csrf_token %}>
-        <p>Sure you wanna delete the post "{{ post.title }}"?</p>
-        <input type = "submit" value = "Confirm">
+    <h1 class = "mx-3">Post: {{ post.title }}</h1>
+    <form action = "" method = "post">{% csrf_token %}
+    <div>
+        <p class = "mx-3 my-2">Sure you wanna delete the post "{{ post.title }}"?</p>
+    </div>    
+        <button class="btn btn-success ml-3" type="submit" value = "Confirm">Delete</button>
     </form>
 {% endblock content  %}
 

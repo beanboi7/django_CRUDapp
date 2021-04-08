@@ -1,13 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content  %}
-    <div class = "post-entry">
-        <h2>{{ post.title }}</h2>
-        <p>{{ post.body }}</p>
-    </div>
-
-    <p><a href = "{% url 'post_edit' post.pk %}">+ Edit Post</a></p>
-    <p><a href = "{% url 'post_delete' post.pk %}">+ Delete Post</a></p>
+<div>
+    <h2 class =  "mx-3 my-2">Title: {{ post.title }}<h2>
+    <p class = "mx-3 my-1">Body: {{ post.body }}</p>
+</div>
+    <p class = "mx-3 my-1"><a href = "{% url 'post_edit' post.pk %}">+ Edit Post</a></p>
+    <p class = "mx-3 my-1"><a href = "{% url 'post_delete' post.pk %}">+ Delete Post</a></p>
 {% endblock content  %}
 
 
