@@ -10,10 +10,17 @@
  </head>
 <body>
     <div>
-        <h1 class = "p-3" "ml-3"><a href = "{% url 'home' %}">Django CRUD App</a></h1> 
-        <a href = "{% url 'post_new' %}" class = "mx-3 my-2">+ New Post</a>
-
-        
+        <header>
+            <h1 class = "p-3" "ml-3"><a href = "{% url 'home' %}">Django CRUD App</a></h1> 
+            <a href = "{% url 'post_new' %}" class = "mx-3 my-2">+ New Post</a>
+        </header>
+            {% if user.is_authenticated %}
+                <p> Vanakkam thala {{ user.username }}! </p>
+                <p><a href = "{% url 'logout' %}">Log-Out</a></p>
+            {% else %}
+                <p> Not logged in </p>
+                <a href = "{% url 'login' %}">Log-In</a>
+            {% endif %}
         {% block content %}
         {% endblock content %}
     </div>
